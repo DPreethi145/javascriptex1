@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-1</title>
+</head>
+<body>
+    <h3>1.What is JavaScript ?</h3>
+    <p>JavaScript is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive.</p>
+    <p>HTML and CSS are languages that give structure and style to web pages, JavaScript gives web pages interactive.</p>
+<br>
+    <h3>2. What is JS Run Time Environment?</h3>
+    <p>Javascript run-time environment is the place where our program gets executed. It determines what global objects your program can access and it can also impact how it runs. JS run-time environment consists of API's,Javascript Engine,Callback Queue and Microtask Queue.</p>
+<img src="https://vahid.blog/post/2021-03-21-understanding-the-javascript-runtime-environment-and-dom-nodes/featured.png" alt="">
+<br>
+<h3>3. What is JS Engine?</h3>
+<p>JavaScript Engine convert the high level code into machine-readable code which lets computer to perform some specific tasks.</p>
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--jpfkSi3A--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/h7509mqq3egedothd2g8.png" alt="">
+<br>
+<h3>4. What is Execution in JS?</h3>
+<p>Javascript execution context is divided into two parts</p>
+<ul>
+    <li> Creation Phase</li>
+    <li>Execution Phase</li>
+</ul>
+<h4>=> Creation Phase</h4>
+<p>This is the initial phase of Global execution content.Here all variables and functions are given memory allocation ie. stored in heap memory and values assigned as undefined.The global execution context is pushed into the callstack and it remains there until all the code gets executed.After complete execution global execution context gets popped from callstack.</p>
+<h4>=> Execution Phase</h4>
+<p>This is the final phase of global execution context.Here code is executed line by line and the original values are assigned to the variables and to the functions at this stage. When function gets executed a seperate execution context gets executed ie. function execution which is pushed into the stack ie. at the top of the global execution context.Here the code inside the function gets excuted. After the execution of the function the function execution context gets popped out of the callstack and the rest of the code gets excuted.</p>
+<img src="https://cpentalk.com/?qa=blob&qa_blobid=6137021251521763964" alt="">
+</body>
+</html>
