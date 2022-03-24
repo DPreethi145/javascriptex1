@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functions</h1>
+    <p>A function is a block of code that performs a specific task.</p>
+    <h2>function declaration Vs function Expression</h2>
+    <p>=> function declaration :  A function declaration defines a function that will be executed when it is invoked.
+         Function declarations load before any code is executed .
+        </p>
+        <pre>
+            function funname(parameter1,parameter2){
+                console.log('function declaration')
+            }
+               funname();
+        </pre>
+
+
+    <p>=> Function Expression : A JavaScript function can also be defined using an expression.
+        Function expressions load only when the interpreter reaches that line of code</p>
+     <pre>   A function expression can be stored in a variable: 
+
+             var funname = function(parameter1,parameter2){
+                 console.log('function expression')
+             }
+              funname();
+     </pre>
+     <h2>Constructor Function</h2>
+     <p>In JavaScript, a constructor function is used to create objects. To create an object from a constructor function, we use the new keyword.</p>
+    <pre>
+        // constructor function
+function Person () {
+    this.name = 'John',
+    this.age = 23
+}
+
+// create an object
+const person = new Person();
+    </pre>
+<h2>Invoked Function</h2>
+<p>immedeatly invoked function is a function expression which is calls or invoke immideatly whenever they created</p>
+<pre>
+    (function(){
+        console.log('invoked function')
+    })()
+
+    <h2>FirstClass Functions</h2>
+    <p>=> functions can be passed as an argument to another function.
+    </p>
+    <pre>
+        var funname = function(parameter1,parameter2){
+            console.log('function expression')
+        }
+         funname();
+    </pre>
+
+    <p>=> function can be returned by another function</p>
+    <pre>
+        function name(){
+            return function name2(){
+                console.log('hello')
+            }
+        }
+          name()()
+    </pre>
+
+    <p>=> function can be assigned as an value</p>
+    <pre>
+        function name(){
+            console.log('hi')
+            return function name2(){
+                console.log('hello')
+            }
+        }
+          name2(name)
+    </pre>
+
+    <h2>CallBack Functions</h2>
+    <p> functions can be passed as an argument to another function.</p>
+    <pre>
+     function name(callback){
+         callback()
+         console.log('hello')
+     }
+      function roll(){
+          console.log('hii')
+      }
+      name(roll)
+    </pre>
+
+    <h2>Higher Order functions</h2>
+    <p>Which accepts another function as an argument or which takes the function as an
+         input and gives the another function as an output. </p>
+    <pre>
+     higher order functions examples are map,filter,reduce etc...
+     arr = [1,2,3,4,5]
+     var a = arr.map((a)=>a*2)
+     console.log(a)
+     o/p : 2,4,6,8,10
+    </pre>
+
+    <h2>Clousers</h2>
+    <p>colusers are the functions bundeled to gather , we can access another function variable</p>
+    <pre>
+        function outer(a){
+           var a=10
+       
+         function inner(){
+             console.log(a)
+         }
+         inner()
+        }
+         outer(5)
+    </pre>
+</body>
+</html>
