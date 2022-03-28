@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrays </h1>
+    <p>Stores Multiples Elements in a Single Variable</p>
+    <h1>Map</h1>
+    <p>Map method will checks all the elements in an array it gives the completly new array as a output</p>
+    <pre>
+        EX: var arr = [1,2,3,4,5]
+            var arr2 = arr.map((a)=>{a=a*2})
+            console.log(arr2)
+
+            Output : [2,4,6,8,10]
+    </pre>
+    <h1>Filter</h1>
+    <p>Filter method will filter all the elements in an array it returns subset of an array as a output</p>
+    <pre>
+        EX : var arr = [1,2,3,4,5]
+             var arr2 = arr.filter((a)=>{a=a<5})
+             console.log(arr2)
+
+             output : [1,2,3,4]
+    </pre>
+    <h1>Reduce</h1>
+    <p>Reduce method will reduces all the elements in an array gives single Value as a output</p>
+    <pre>
+        EX: var arr = [1,2,3]
+            var arr2 = arr.reduce((sum,a)=>sum+a,0)
+            console.log(arr2)
+
+            output : 6
+    </pre>
+    <h1>Push</h1>
+    <p>my using push it push the element at the end of an array</p>
+    <p>EX : arr.push(10)</p>
+    <h1>Pop</h1>
+    <p>my using pop it removes the element at the end of an array</p>
+    <p>EX : arr.pop()</p>
+    <h1>Shift</h1>
+    <p>By using shift it Removes the element starting of an array</p>
+    <p>EX : arr.shift()</p>
+    <h1>UnShift</h1>
+    <p>By using shift it add the element starting of an array</p>
+    <p>EX : arr.Unshift()</p>
+    <h1>Some and Every</h1>
+    <p>Both these are take in a condition and check if all the elements in th array is satisfying the condition or not, they always return a boolean value.</p>
+     <p>Ex:   some syntax - const val2 = arr.some(x => x%2 == 0); </p>
+     <p>EX : every syntax - const val3 = arr.every(x => x%2 == 0);</p>
+
+</body>
+</html>
