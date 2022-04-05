@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>   
+    <h1>DOM-Document Object Model</h1>
+   
+</center>
+<p> innerText - It will returns all the text contained by an element and all its child elements.</p>
+<p>innerHTML - It will returns all the text including html tags and that is contained by an element.</p>
+<h5>  Accessing HTML element by tag, id, classname - </h5>
+<pre>
+    let element1=document.getElementsByTagName("h1");     
+
+   console.log(element1);
+    console.log(element1[0].innerText);
+
+    2. ByClassName -
+    
+    const element2= document.getElementsByClassName("heading");
+    console.log(element2[0].innerHTML); 
+
+    3. ById - 
+    
+    const element3= document.getElementById("unique");
+    console.log(element3.innerHTML); 
+</pre>
+<h2 id="head"></h2>
+<button onclick="fun()"> Click here</button>
+
+
+ <h5>Change Text</h5>
+ <pre>
+    fun1=()=>{
+        var b = document.getElementById("head1").innerHTML = "Elevation"
+    }
+ </pre>
+ <h2 id="head1">PrepBytes</h2>
+ <button onclick="fun1()">Change</button>
+ <h5>Using 2 Buttons</h5>
+<pre>
+    visible=()=>{
+        var c = document.getElementById("head2").innerHTML='my content is visible'
+        console.log(c)
+    }
+    not_visible=()=>{
+        var d = document.getElementById("head2").innerHTML=" ";
+        console.log(d)
+    }
+</pre>
+ <h2 id="head2"></h2>
+ <button onclick="visible()">visible</button>
+ <button onclick="not_visible()">not Visible</button>
+<h5>Creating a Span tag in js file</h5>
+<pre>
+    function create(){
+        const element= document.createElement('span');
+        element.setAttribute("id","spani")
+        element.innerText = "Span Tag Created" + " ";
+        console.log(element);
+        const parent = document.getElementById('parent');
+        parent.appendChild(element);
+    }
+</pre>
+<button onclick="create()">click here</button>
+<h2 id="parent"></h2>
+ <script src="./Day12.js"></script>
+</body>
+</html>
